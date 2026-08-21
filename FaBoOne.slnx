@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/apps/" />
+  <Folder Name="/apps/api/">
+    <Project Path="apps/api/FaBoOne.Api.csproj" />
+  </Folder>
+  <Folder Name="/workers/" />
+  <Folder Name="/workers/data-ingestion/">
+    <Project Path="workers/data-ingestion/FaBoOne.DataIngestion.csproj" />
+  </Folder>
+</Solution>

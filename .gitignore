@@ -1,0 +1,14 @@
+# JavaScript / Angular
+**/node_modules/
+**/dist/
+**/.angular/
+**/.npm-cache/
+
+# .NET
+**/bin/
+**/obj/
+
+# Local configuration
+.env
+.env.*
+!.env.example

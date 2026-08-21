@@ -1,0 +1,156 @@
+<div class="app-shell">
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="FaBoOne 首頁">
+      <span class="brand-mark">F</span>
+      <span>FaBoOne</span>
+    </a>
+    <label class="search-box">
+      <span aria-hidden="true">⌕</span>
+      <input type="search" value="2330" aria-label="搜尋股票代號或公司名稱" />
+    </label>
+    <button class="watchlist" type="button">＋ 加入自選</button>
+  </header>
+
+  <main class="page-content">
+    <p class="breadcrumb">台股 / 半導體業 / 晶圓代工</p>
+
+    <section class="company-heading" aria-labelledby="company-name">
+      <div>
+        <div class="company-title-row">
+          <h1 id="company-name">台積電 <span>2330</span></h1>
+          <span class="market-tag">上市</span>
+        </div>
+        <p>台灣積體電路製造股份有限公司</p>
+      </div>
+      <div class="price-summary">
+        <span class="label">最近收盤價</span>
+        <strong>1,165.00</strong>
+        <span class="positive">▲ 1.75%（+20.00）</span>
+      </div>
+    </section>
+
+    <nav class="section-tabs" aria-label="公司分析分頁">
+      @for (tab of tabs; track tab) {
+        <button type="button" [class.active]="activeTab() === tab" (click)="selectTab(tab)">
+          {{ tab }}
+        </button>
+      }
+    </nav>
+
+    <section class="metric-grid" aria-label="關鍵市場指標">
+      <article class="metric-card">
+        <span>總市值</span>
+        <strong>30.22 兆</strong>
+        <small>新台幣</small>
+      </article>
+      <article class="metric-card">
+        <span>本益比</span>
+        <strong>22.6 倍</strong>
+        <small>近四季 EPS</small>
+      </article>
+      <article class="metric-card">
+        <span>殖利率</span>
+        <strong>1.71%</strong>
+        <small>現金股利</small>
+      </article>
+      <article class="metric-card">
+        <span>月營收 YoY</span>
+        <strong class="positive">+27.8%</strong>
+        <small>2026 年 7 月</small>
+      </article>
+    </section>
+
+    <section class="section-header">
+      <div>
+        <p class="eyebrow">INVESTMENT SNAPSHOT</p>
+        <h2>投資摘要</h2>
+      </div>
+      <p class="updated">資料更新：2026/08/20 收盤後</p>
+    </section>
+
+    <section class="assessment-grid" aria-label="四大公司分析面向">
+      <article class="assessment-card good">
+        <div class="assessment-title"><span class="icon">↗</span><span>成長</span></div>
+        <strong>持續擴張</strong>
+        <p>營收連續四季年增，最新單月營收年增 27.8%。</p>
+      </article>
+      <article class="assessment-card good">
+        <div class="assessment-title"><span class="icon">◎</span><span>獲利</span></div>
+        <strong>穩健提升</strong>
+        <p>近四季 EPS 續創新高，毛利率維持在 60% 以上。</p>
+      </article>
+      <article class="assessment-card neutral">
+        <div class="assessment-title"><span class="icon">◒</span><span>財務體質</span></div>
+        <strong>現金流健康</strong>
+        <p>營業現金流足以支應資本支出，仍須留意擴產強度。</p>
+      </article>
+      <article class="assessment-card caution">
+        <div class="assessment-title"><span class="icon">◈</span><span>估值</span></div>
+        <strong>評價偏高</strong>
+        <p>本益比高於五年中位數，市場已反映部分成長預期。</p>
+      </article>
+    </section>
+
+    <section class="analysis-grid">
+      <article class="panel chart-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">OPERATING PERFORMANCE</p>
+            <h2>營收與每股盈餘趨勢</h2>
+          </div>
+          <div class="legend"><span><i class="bar-key"></i>營收</span><span><i class="line-key"></i>EPS</span></div>
+        </div>
+        <div class="chart-wrap" role="img" aria-label="近四季營收與每股盈餘趨勢圖">
+          <div class="y-labels"><span>12,000 億</span><span>8,000 億</span><span>4,000 億</span><span>0</span></div>
+          <div class="chart-area">
+            <div class="grid-line line-1"></div><div class="grid-line line-2"></div><div class="grid-line line-3"></div>
+            <div class="bars">
+              <div class="bar-group"><div class="bar" style="height: 66%"></div><span>Q3</span></div>
+              <div class="bar-group"><div class="bar" style="height: 70%"></div><span>Q4</span></div>
+              <div class="bar-group"><div class="bar" style="height: 74%"></div><span>Q1</span></div>
+              <div class="bar-group"><div class="bar active-bar" style="height: 80%"></div><span>Q2</span></div>
+            </div>
+            <svg viewBox="0 0 400 150" preserveAspectRatio="none" aria-hidden="true">
+              <polyline points="30,111 145,89 260,67 370,38" fill="none" stroke="currentColor" stroke-width="3" />
+              <circle cx="30" cy="111" r="4" /><circle cx="145" cy="89" r="4" /><circle cx="260" cy="67" r="4" /><circle cx="370" cy="38" r="5" />
+            </svg>
+          </div>
+        </div>
+        <div class="chart-caption"><span>2025 Q3</span><span>2025 Q4</span><span>2026 Q1</span><span>2026 Q2</span></div>
+      </article>
+
+      <article class="panel insight-panel">
+        <p class="eyebrow">AUTO INSIGHT</p>
+        <h2>本期分析重點</h2>
+        <ul>
+          <li><span class="dot positive-dot"></span><span><strong>AI 需求帶動營收：</strong>先進製程與先進封裝需求延續，營收維持雙位數年增。</span></li>
+          <li><span class="dot positive-dot"></span><span><strong>獲利率穩定：</strong>毛利率與營業利益率同步走高，顯示產品組合仍具支撐。</span></li>
+          <li><span class="dot caution-dot"></span><span><strong>資本支出偏高：</strong>擴產會壓縮短期自由現金流，需觀察後續產能利用率。</span></li>
+        </ul>
+        <button class="text-button" type="button">查看分析依據 <span>→</span></button>
+      </article>
+    </section>
+
+    <section class="panel financial-panel">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">QUARTERLY FINANCIALS</p>
+          <h2>近四季關鍵指標</h2>
+        </div>
+        <button class="text-button" type="button">查看完整資料 <span>→</span></button>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>期間</th><th>營收</th><th>EPS</th><th>毛利率</th></tr></thead>
+          <tbody>
+            @for (quarter of quarters; track quarter.period) {
+              <tr><td>{{ quarter.period }}</td><td>{{ quarter.revenue }}</td><td>{{ quarter.eps }}</td><td>{{ quarter.margin }}</td></tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="data-footer">資料來源：公開資訊觀測站、臺灣證券交易所｜數據僅供研究參考，不構成投資建議。</footer>
+  </main>
+</div>

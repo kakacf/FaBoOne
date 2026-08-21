@@ -11,6 +11,30 @@
 
 第一版不包含美股、即時行情、新聞爬蟲、登入與推播。
 
+## 專案結構
+
+- `apps/web`：Angular PWA，現在含 2330 公司分析 mock 畫面。
+- `apps/api`：ASP.NET Core Web API。
+- `workers/data-ingestion`：.NET Worker Service，之後負責排程擷取與標準化資料。
+- `FaBoOne.slnx`：API 與 worker 的 .NET solution。
+
+## 本機啟動
+
+需求：Node.js LTS、.NET 10 SDK；PostgreSQL 與 Docker Compose 會在資料層開始實作時加入。
+
+```powershell
+# 前端
+cd apps/web
+npm install
+npm start
+
+# API 與 worker
+cd ../..
+dotnet build FaBoOne.slnx
+```
+
+前端啟動後，開啟命令列顯示的本機網址即可瀏覽公司分析頁。
+
 ## 文件
 
 - [公司分析 PWA 規格](docs/company-analysis/INDEX.md)
@@ -19,8 +43,4 @@
 - [資料字典與口徑](docs/company-analysis/02-data-dictionary.md)
 - [MVP 路線圖](docs/company-analysis/03-mvp-roadmap.md)
 
-## 開發狀態
-
-目前為產品規畫階段；尚未建立前端、後端或資料庫專案。
-
-開始實作前，請先依 [CONTRIBUTING.md](CONTRIBUTING.md) 建立功能分支。
+請先依 [CONTRIBUTING.md](CONTRIBUTING.md) 建立功能分支，再開始修改。
