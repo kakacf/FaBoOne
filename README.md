@@ -13,7 +13,8 @@
 
 ## 文件
 
-- [公司分析 PWA 規格](docs/company-analysis/README.md)
+- [公司分析 PWA 規格](docs/company-analysis/INDEX.md)
+- [系統架構原則](docs/architecture.md)
 - [產品範圍](docs/company-analysis/01-product-scope.md)
 - [資料字典與口徑](docs/company-analysis/02-data-dictionary.md)
 - [MVP 路線圖](docs/company-analysis/03-mvp-roadmap.md)
@@ -23,4 +24,3 @@
 目前為產品規畫階段；尚未建立前端、後端或資料庫專案。
 
 開始實作前，請先依 [CONTRIBUTING.md](CONTRIBUTING.md) 建立功能分支。
-
